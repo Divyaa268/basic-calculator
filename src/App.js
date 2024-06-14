@@ -28,12 +28,14 @@
 import React from 'react';
 import Calculator from './Calculator';
 import './App.css'; // Optional: for global styles
+import Caraousel from './Caraousel';
 
 const App = () => {
   return (
     <div className="App">
       <h1>Basic Calculator</h1>
       <Calculator />
+      <Caraousel />
     </div>
   );
 };
