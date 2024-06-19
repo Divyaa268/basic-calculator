@@ -16,6 +16,7 @@ const CommentsContainer = () => {
   
   export default CommentsContainer;
 
+  // structure
 //   CommentsContainer
 //   └── CommentsList (commentsData)
 //       ├── Comment 1 (no replies)
