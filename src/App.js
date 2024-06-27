@@ -29,6 +29,26 @@ import React from 'react';
 import Calculator from './Calculator';
 import './App.css'; // Optional: for global styles
 import Caraousel from './Caraousel';
+import Accordian from './Accordian';
+import ShimmerUI from './ShimmerUI';
+import DisplayShimmer from './DisplayShimmer';
+import CommentsContainer from './CommentContainer';
+import PollManager from './PollManager';
+
+const items = [
+  {
+      title: 'Section 1',
+      content: 'Content for section 1.'
+  },
+  {
+      title: 'Section 2',
+      content: 'Content for section 2.'
+  },
+  {
+      title: 'Section 3',
+      content: 'Content for section 3.'
+  }
+];
 
 const App = () => {
   return (
@@ -36,6 +56,10 @@ const App = () => {
       <h1>Basic Calculator</h1>
       <Calculator />
       <Caraousel />
+      <Accordian items={items} />
+      <DisplayShimmer />
+      <CommentsContainer />
+      <PollManager />
     </div>
   );
 };
