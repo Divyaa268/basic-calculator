@@ -19,22 +19,48 @@ const ToDoList = () => {
 
     function addTask()
     {
+        // tp prevent adding task with empty strings
+        if(newTask.trim() !== "")
+            {
+                setTasks(t => [...t, newTask]);
+                // clear the input after adding new task
+                setNewTask("");
+            }
+    }
+
+    function deleteTask(index)
+    {
+        // create a new array which should filter out the task that you want to delete
+        // if it matches with the index i
+        const updatedTasks = tasks.filter((element, i) => i !== index);
+        setTasks(updatedTasks);
+    }
+
+    function moveTaskUp(index)
+    {
+        if(index > 0)
+            {
+                const updatedTasks = [...tasks];
+                // destructure the array of tasks
+                // swap the top and bottom elements in array
+                [updatedTasks[index], updatedTasks[index -1]] = 
+                [updatedTasks[index - 1], updatedTasks[index]];
+                setTasks(updatedTasks);
+            }
 
     }
 
-    function deleteTask()
+    function moveTaskDown(index)
     {
-
-    }
-
-    function moveTaskUp()
-    {
-
-    }
-
-    function moveTaskDown()
-    {
-
+        if(index < tasks.length - 1)
+            {
+                const updatedTasks = [...tasks];
+                // destructure the array of tasks
+                // swap the top and bottom elements in array
+                [updatedTasks[index], updatedTasks[index + 1]] = 
+                [updatedTasks[index + 1], updatedTasks[index]];
+                setTasks(updatedTasks);
+            }
     }
 
   return (
