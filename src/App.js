@@ -34,6 +34,11 @@ import ShimmerUI from './ShimmerUI';
 import DisplayShimmer from './DisplayShimmer';
 import CommentsContainer from './CommentContainer';
 import PollManager from './PollManager';
+import Counter from './FECoding/Counter';
+import HolyGrail from './FECoding/HolyGrail';
+import ToDoList from './FECoding/ToDoList';
+import './traffic.css'
+import TrafficLight from './FECoding/TrafficLight';
 
 const items = [
   {
@@ -50,16 +55,40 @@ const items = [
   }
 ];
 
+const trafficStates = {
+  red :{
+    duration: 4000,
+    backgroundColor: "red",
+    next: "green"
+
+  },
+  yellow :
+  {
+    duration: 500,
+    backgroundColor: "yellow",
+    next: "red"
+  },
+  green: {
+    duration: 3000,
+    backgroundColor: "green",
+    next: "yellow"
+  }
+}
+
 const App = () => {
   return (
     <div className="App">
-      <h1>Basic Calculator</h1>
+      {/* <h1>Basic Calculator</h1>
       <Calculator />
       <Caraousel />
       <Accordian items={items} />
       <DisplayShimmer />
       <CommentsContainer />
       <PollManager />
+      <Counter /> */}
+      {/* <HolyGrail/> */}
+      {/* <ToDoList /> */}
+      <TrafficLight trafficStates = {trafficStates} />
     </div>
   );
 };
