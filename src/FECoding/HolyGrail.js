@@ -1,4 +1,7 @@
 import React from 'react'
+import '../holygrail.css';
+
+// Using CSS Grid
 
 const HolyGrail = () => {
   return (
