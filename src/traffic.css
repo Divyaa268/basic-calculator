@@ -1,0 +1,27 @@
+.App
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.traffic-light-container
+{
+    background-color: black;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column; 
+    /* so that all lights are below each other in a column */
+    padding: 10px;
+    gap: 10px;
+}
+
+.traffic-light
+{
+    --size:50px;
+    background-color: azure;
+    border-radius: var(--size);
+    height: var(--size);
+    width: var(--size);
+}
